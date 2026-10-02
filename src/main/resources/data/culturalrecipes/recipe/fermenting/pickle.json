@@ -1,25 +1,27 @@
 {
+  "_comment": "Only load when Brewin' And Chewin' provides the fermenting serializer; without this the vanilla recipe manager logs an unknown-serializer error on every start.",
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:registry_contains",
+      "registry": "minecraft:recipe_serializer",
+      "values": [
+        "brewinandchewin:fermenting"
+      ]
+    }
+  ],
   "type": "brewinandchewin:fermenting",
   "experience": 0.6,
   "fermentingtime": 12000,
   "ingredients": [
-    {
-      "item": "culturaldelights:cucumber"
-    },
-    {
-      "item": "culturaldelights:cucumber"
-    },
-    {
-      "item": "culturaldelights:cucumber"
-    },
-    {
-      "item": "culturaldelights:cucumber"
-    }
+    "culturaldelights:cucumber",
+    "culturaldelights:cucumber",
+    "culturaldelights:cucumber",
+    "culturaldelights:cucumber"
   ],
   "recipe_book_tab": "misc",
   "result": {
-    "count": 4,
-    "id": "culturaldelights:pickle"
+    "id": "culturaldelights:pickle",
+    "count": 4
   },
   "temperature": 2
 }

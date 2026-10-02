@@ -1,19 +1,15 @@
 {
   "type": "farmersdelight:cutting",
   "ingredients": [
-    {
-      "item": "culturaldelights:wild_eggplants"
-    }
+    "culturaldelights:wild_eggplants"
   ],
   "result": [
     {
       "item": {
-        "count": 3,
-        "id": "culturaldelights:eggplant_seeds"
+        "id": "culturaldelights:eggplant_seeds",
+        "count": 3
       }
     }
   ],
-  "tool": {
-    "tag": "c:tools/knife"
-  }
+  "tool": "#c:tools/knife"
 }

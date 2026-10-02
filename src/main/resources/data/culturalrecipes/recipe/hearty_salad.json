@@ -1,24 +1,13 @@
 {
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
-    {
-      "tag": "c:crops/tomato"
-    },
-    {
-      "tag": "c:crops/avocado"
-    },
-    {
-      "tag": "c:crops/corn"
-    },
-    {
-      "tag": "c:crops/cucumber"
-    },
-    {
-      "item": "minecraft:bowl"
-    }
+    "#c:crops/tomato",
+    "#c:crops/avocado",
+    "#c:crops/corn",
+    "#c:crops/cucumber",
+    "minecraft:bowl"
   ],
   "result": {
-    "count": 1,
     "id": "culturaldelights:hearty_salad"
   }
 }

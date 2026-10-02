@@ -5,21 +5,14 @@
     "id": "minecraft:stick"
   },
   "cookingtime": 400,
-  "experience": 2.0,
+  "experience": 2,
   "ingredients": [
-    {
-      "tag": "c:foods/milk"
-    },
-    {
-      "tag": "c:crops/corn"
-    },
-    {
-      "tag": "c:crops/onion"
-    }
+    "#c:drinks/milk",
+    "#c:crops/corn",
+    "#c:crops/onion"
   ],
   "recipe_book_tab": "meals",
   "result": {
-    "count": 1,
     "id": "culturaldelights:elote"
   }
 }

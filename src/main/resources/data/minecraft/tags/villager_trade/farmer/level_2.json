@@ -1,0 +1,20 @@
+{
+    "values":  [
+                   {
+                       "id":  "culturaldelights:farmer/2/eggplant_emerald",
+                       "required":  false
+                   },
+                   {
+                       "id":  "culturaldelights:farmer/2/avocado_emerald",
+                       "required":  false
+                   },
+                   {
+                       "id":  "culturaldelights:farmer/2/cucumber_emerald",
+                       "required":  false
+                   },
+                   {
+                       "id":  "culturaldelights:farmer/2/corn_cob_emerald",
+                       "required":  false
+                   }
+               ]
+}

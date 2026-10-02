@@ -1,9 +1,6 @@
 {
   "creativetab.culturaldelights.culturaldelights_tab": "Cultural Delights",
-
-
   "itemGroup.culturalTab": "Cultural Delights",
-
   "item.culturaldelights.avocado": "Abacate",
   "item.culturaldelights.cut_avocado": "Abacate cortado",
   "item.culturaldelights.cucumber": "Pepino",
@@ -24,7 +21,6 @@
   "item.culturaldelights.tortilla": "Tortilla",
   "item.culturaldelights.tortilla_chips": "Chips de tortilla",
   "item.culturaldelights.poached_eggplants": "Poached Eggplants",
-
   "item.culturaldelights.elote": "Elote",
   "item.culturaldelights.hearty_salad": "Salada saudável",
   "item.culturaldelights.beef_burrito": "Burrito de carne",
@@ -32,7 +28,6 @@
   "item.culturaldelights.eggplant_burger": "Hambúrguer de berinjela",
   "item.culturaldelights.fried_eggplant_pasta": "Macarrão de berinjela frita",
   "item.culturaldelights.avocado_toast": "Torrada de abacate",
-
   "item.culturaldelights.chicken_maki": "Maki de frango",
   "item.culturaldelights.vegetable_maki": "Maki de legumes",
   "item.culturaldelights.cod_maki": "Maki de bacalhau",
@@ -45,7 +40,6 @@
   "item.culturaldelights.tropical_nigiri": "Nigiri tropical",
   "item.culturaldelights.onigiri": "Onigiri",
   "item.culturaldelights.tamago": "Tamago",
-
   "block.culturaldelights.avocado_bundle": "Pacote de abacates",
   "block.culturaldelights.bamboo_mat": "Tapete de bambu",
   "block.culturaldelights.wild_cucumbers": "Pepinos selvagens",
@@ -68,9 +62,7 @@
   "block.culturaldelights.corn_cob_crate": "Caixote de espigas de milho",
   "block.culturaldelights.eggplant_crate": "Caixote de berinjelas",
   "block.culturaldelights.white_eggplant_crate": "Caixote de berinjelas brancas",
-
   "screen.culturaldelights.bamboo_mat": "Tapete de bambu",
-
   "tag.item.c.crops.avocado": "Abacate",
   "tag.item.c.crops.cucumber": "Pepino",
   "tag.item.c.crops.eggplant": "Berinjela",
@@ -78,14 +70,19 @@
   "tag.item.c.crops.rice": "Arroz",
   "tag.item.c.crops.onion": "Cebola",
   "tag.item.c.crops.tomato": "Tomate",
-
   "tag.item.c.foods.bread": "Pão",
   "tag.item.c.foods.cooked_egg": "Ovo cozido",
   "tag.item.c.foods.cooked_fish": "Peixe cozido",
   "tag.item.c.foods.cooked_mutton": "Carneiro cozido",
   "tag.item.c.foods.leafy_green": "Verduras",
   "tag.item.c.foods.milk": "Leite",
-
   "tag.item.c.logs.avocado": "Troncos de abacate",
-  "tag.item.c.eggs": "Ovos"
+  "tag.item.c.eggs": "Ovos",
+  "itemGroup.culturaldelights.culturaldelights_tab": "Cultural Delights",
+  "tag.item.c.crops.cucumbers": "Pepinos",
+  "tag.item.c.foods.cucumbers": "Pepinos",
+  "tag.item.c.foods.eggplant": "Berinjela",
+  "tag.item.c.foods.dough": "Massas",
+  "tag.item.c.seeds": "Sementes",
+  "tag.item.farmersdelight.wild_crops": "Culturas selvagens"
 }

@@ -6,21 +6,12 @@
     "###"
   ],
   "key": {
-    "#": {
-      "item": "minecraft:dried_kelp"
-    },
-    "@": {
-      "item": "farmersdelight:cooked_rice"
-    },
-    "?": {
-      "tag": "culturaldelights:cooked_chickens"
-    },
-    "!": {
-      "item": "minecraft:beetroot"
-    }
+    "#": "minecraft:dried_kelp",
+    "@": "farmersdelight:cooked_rice",
+    "?": "#culturaldelights:cooked_chickens",
+    "!": "minecraft:beetroot"
   },
   "result": {
-    "count": 1,
     "id": "culturaldelights:chicken_roll"
   }
 }

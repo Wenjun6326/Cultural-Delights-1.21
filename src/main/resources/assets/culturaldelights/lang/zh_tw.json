@@ -1,12 +1,9 @@
 {
   "creativetab.culturaldelights.culturaldelights_tab": "Cultural Delights",
-
-
   "item.culturaldelights.cucumber_seeds": "小黃瓜種子",
   "item.culturaldelights.eggplant_seeds": "茄子種子",
   "item.culturaldelights.corn_kernels": "玉米粒",
   "block.culturaldelights.exotic_roll_medley": "珍奇壽司拼盤",
-
   "item.culturaldelights.avocado": "酪梨",
   "item.culturaldelights.cut_avocado": "酪梨片",
   "item.culturaldelights.cucumber": "小黃瓜",
@@ -32,7 +29,6 @@
   "item.culturaldelights.raw_calamari": "生魷魚肉",
   "item.culturaldelights.cooked_calamari": "熟魷魚肉",
   "item.culturaldelights.poached_eggplants": "Poached Eggplants",
-
   "item.culturaldelights.elote": "烤玉米",
   "item.culturaldelights.hearty_salad": "豐盛沙拉",
   "item.culturaldelights.beef_burrito": "墨西哥牛肉捲餅",
@@ -45,7 +41,6 @@
   "item.culturaldelights.spicy_curry": "辣味咖哩",
   "item.culturaldelights.pork_wrap": "豬肉捲餅",
   "item.culturaldelights.fish_taco": "魚肉塔可餅",
-
   "item.culturaldelights.chicken_roll": "雞肉卷壽司",
   "item.culturaldelights.midori_roll": "蔬菜卷壽司",
   "item.culturaldelights.chicken_roll_slice": "雞肉壽司片",
@@ -55,7 +50,6 @@
   "item.culturaldelights.rice_ball": "飯糰",
   "item.culturaldelights.egg_roll": "玉子燒握壽司",
   "item.culturaldelights.calamari_roll": "魷魚握壽司",
-
   "block.culturaldelights.avocado_bundle": "酪梨捆",
   "block.culturaldelights.wild_cucumbers": "野生小黃瓜",
   "block.culturaldelights.wild_corn": "野生玉米",
@@ -77,7 +71,6 @@
   "block.culturaldelights.corn_cob_crate": "玉米箱",
   "block.culturaldelights.eggplant_crate": "茄子箱",
   "block.culturaldelights.white_eggplant_crate": "白茄子箱",
-
   "tag.item.c.crops.avocado": "酪梨",
   "tag.item.c.crops.cucumber": "小黃瓜",
   "tag.item.c.crops.eggplant": "茄子",
@@ -85,14 +78,23 @@
   "tag.item.c.crops.rice": "米",
   "tag.item.c.crops.onion": "洋蔥",
   "tag.item.c.crops.tomato": "番茄",
-
   "tag.item.c.foods.bread": "麵包",
   "tag.item.c.foods.cooked_egg": "熟蛋",
   "tag.item.c.foods.cooked_fish": "熟魚",
   "tag.item.c.foods.cooked_mutton": "熟羊肉",
   "tag.item.c.foods.leafy_green": "葉菜",
   "tag.item.c.foods.milk": "牛奶",
-
   "tag.item.c.logs.avocado": "酪梨原木",
-  "tag.item.c.eggs": "蛋"
+  "tag.item.c.eggs": "蛋",
+  "itemGroup.culturaldelights.culturaldelights_tab": "Cultural Delights",
+  "tag.item.c.crops.cucumbers": "小黃瓜",
+  "tag.item.c.foods.cucumbers": "小黃瓜",
+  "tag.item.c.foods.eggplant": "茄子",
+  "tag.item.c.foods.dough": "麵團",
+  "tag.item.c.seeds": "種子",
+  "tag.item.farmersdelight.wild_crops": "野生作物",
+  "item.culturaldelights.empanada": "恩潘納達餃",
+  "item.culturaldelights.eggplant_parmesan": "盤裝焗烤千層茄子",
+  "block.culturaldelights.eggplant_parmesan_block": "焗烤千層茄子",
+  "block.culturaldelights.fruiting_avocado_leaves": "結果的酪梨樹葉"
 }

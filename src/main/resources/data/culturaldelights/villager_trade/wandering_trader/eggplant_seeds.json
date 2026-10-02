@@ -1,0 +1,18 @@
+{
+    "fabric:load_conditions":  [
+                                   {
+                                       "condition":  "culturaldelights:config",
+                                       "value":  "wanderingTraderSellsFDItems"
+                                   }
+                               ],
+    "wants":  {
+                  "id":  "minecraft:emerald",
+                  "count":  1
+              },
+    "gives":  {
+                  "id":  "culturaldelights:eggplant_seeds"
+              },
+    "max_uses":  1,
+    "xp":  12,
+    "reputation_discount":  0.05
+}

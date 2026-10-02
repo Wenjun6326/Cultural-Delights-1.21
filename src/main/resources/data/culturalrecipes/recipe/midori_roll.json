@@ -6,21 +6,12 @@
     "###"
   ],
   "key": {
-    "#": {
-      "item": "minecraft:dried_kelp"
-    },
-    "@": {
-      "item": "farmersdelight:cooked_rice"
-    },
-    "?": {
-      "tag": "c:crops/avocado"
-    },
-    "!": {
-      "tag": "c:crops/cucumber"
-    }
+    "#": "minecraft:dried_kelp",
+    "@": "farmersdelight:cooked_rice",
+    "?": "#c:crops/avocado",
+    "!": "#c:crops/cucumber"
   },
   "result": {
-    "count": 1,
     "id": "culturaldelights:midori_roll"
   }
 }

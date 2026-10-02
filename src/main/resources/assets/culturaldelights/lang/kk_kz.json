@@ -3,7 +3,6 @@
   "item.culturaldelights.eggplant_seeds": "Баялды тұқымы",
   "item.culturaldelights.corn_kernels": "Жүгері дәні",
   "block.culturaldelights.exotic_roll_medley": "Экзотикалық орамалар",
-
   "item.culturaldelights.avocado": "Авокадо",
   "item.culturaldelights.cut_avocado": "Туралған авокадо",
   "item.culturaldelights.cucumber": "Қияр",
@@ -29,7 +28,6 @@
   "item.culturaldelights.cooked_squid": "Піскен кальмар",
   "item.culturaldelights.raw_calamari": "Шикі кальмар еті",
   "item.culturaldelights.cooked_calamari": "Піскен кальмар еті",
-
   "item.culturaldelights.elote": "Элоте",
   "item.culturaldelights.empanada": "Эмпанада",
   "item.culturaldelights.hearty_salad": "Нәрлі салат",
@@ -44,7 +42,6 @@
   "item.culturaldelights.fish_taco": "Балық такосы",
   "item.culturaldelights.poached_eggplants": "Қайнатылған баялды",
   "item.culturaldelights.eggplant_parmesan": "Баялды пармезан табағы",
-
   "item.culturaldelights.chicken_roll": "Тауық орамасы",
   "item.culturaldelights.midori_roll": "Мидори орамасы",
   "item.culturaldelights.chicken_roll_slice": "Тауық орама тілімі",
@@ -54,12 +51,10 @@
   "item.culturaldelights.rice_ball": "Күріш түйірі",
   "item.culturaldelights.egg_roll": "Жұмыртқа орамасы",
   "item.culturaldelights.calamari_roll": "Кальмар орамасы",
-
   "block.culturaldelights.cucumbers": "Қияр",
   "block.culturaldelights.eggplants": "Баялды",
   "block.culturaldelights.corn": "Жүгері",
   "block.culturaldelights.corn_upper": "Жүгері",
-
   "block.culturaldelights.avocado_bundle": "Авокадо шоғыры",
   "block.culturaldelights.wild_cucumbers": "Жабайы қияр",
   "block.culturaldelights.wild_corn": "Жабайы жүгері",
@@ -77,9 +72,7 @@
   "block.culturaldelights.eggplant_crate": "Баялды жәшігі",
   "block.culturaldelights.white_eggplant_crate": "Ақ баялды жәшігі",
   "block.culturaldelights.eggplant_parmesan_block": "Баялды пармезан",
-
   "creativetab.culturaldelights.culturaldelights_tab": "Дәстүрлер қуанышы",
-
   "tag.item.culturaldelights.all_eggplants": "Баялдылар",
   "tag.item.culturaldelights.avocado_logs": "Авокадо діңгектері",
   "tag.item.culturaldelights.avocados": "Авокадолар",
@@ -91,7 +84,6 @@
   "tag.item.culturaldelights.raw_salmons": "Шикі албырт",
   "tag.item.culturaldelights.regular_eggplants": "Қарапайым баялдылар",
   "tag.item.culturaldelights.smoked_regular_eggplants": "Сүрленген қарапайым баялдылар",
-
   "tag.item.c.crops.avocado": "Авокадо",
   "tag.item.c.crops.cucumber": "Қияр",
   "tag.item.c.crops.eggplant": "Баялды",
@@ -99,14 +91,19 @@
   "tag.item.c.crops.rice": "Күріш",
   "tag.item.c.crops.onion": "Пияз",
   "tag.item.c.crops.tomato": "Қызанақ",
-
   "tag.item.c.foods.bread": "Нан",
   "tag.item.c.foods.cooked_egg": "Піскен жұмыртқа",
   "tag.item.c.foods.cooked_fish": "Піскен балық",
   "tag.item.c.foods.cooked_mutton": "Піскен қой еті",
   "tag.item.c.foods.leafy_green": "Жапырақты көктер",
   "tag.item.c.foods.milk": "Сүт",
-
   "tag.item.c.logs.avocado": "Авокадо діңгектері",
-  "tag.item.c.eggs": "Жұмыртқалар"
+  "tag.item.c.eggs": "Жұмыртқалар",
+  "itemGroup.culturaldelights.culturaldelights_tab": "Дәстүрлер қуанышы",
+  "tag.item.c.crops.cucumbers": "Қияр",
+  "tag.item.c.foods.cucumbers": "Қияр",
+  "tag.item.c.foods.eggplant": "Баялды",
+  "tag.item.c.foods.dough": "Қамыр",
+  "tag.item.c.seeds": "Тұқымдар",
+  "tag.item.farmersdelight.wild_crops": "?????? ????????"
 }

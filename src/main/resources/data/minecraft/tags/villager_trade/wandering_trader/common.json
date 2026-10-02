@@ -1,0 +1,24 @@
+{
+    "values":  [
+                   {
+                       "id":  "culturaldelights:wandering_trader/avocado_sapling",
+                       "required":  false
+                   },
+                   {
+                       "id":  "culturaldelights:wandering_trader/eggplant_seeds",
+                       "required":  false
+                   },
+                   {
+                       "id":  "culturaldelights:wandering_trader/cucumber_seeds",
+                       "required":  false
+                   },
+                   {
+                       "id":  "culturaldelights:wandering_trader/pickle",
+                       "required":  false
+                   },
+                   {
+                       "id":  "culturaldelights:wandering_trader/corn_kernels",
+                       "required":  false
+                   }
+               ]
+}

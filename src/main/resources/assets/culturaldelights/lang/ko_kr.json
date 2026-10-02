@@ -3,7 +3,6 @@
   "item.culturaldelights.eggplant_seeds": "가지 씨앗",
   "item.culturaldelights.corn_kernels": "옥수수 낱알",
   "block.culturaldelights.exotic_roll_medley": "열대 모듬 초밥",
-
   "item.culturaldelights.avocado": "아보카도",
   "item.culturaldelights.cut_avocado": "아보카도 조각",
   "item.culturaldelights.cucumber": "오이",
@@ -29,7 +28,6 @@
   "item.culturaldelights.cooked_squid": "익힌 오징어",
   "item.culturaldelights.raw_calamari": "익히지 않은 오징어 살점",
   "item.culturaldelights.cooked_calamari": "익힌 오징어 살점",
-
   "item.culturaldelights.elote": "엘로테",
   "item.culturaldelights.empanada": "엠파나다",
   "item.culturaldelights.hearty_salad": "원기 샐러드",
@@ -44,7 +42,6 @@
   "item.culturaldelights.pork_wrap": "돼지고기 랩",
   "item.culturaldelights.fish_taco": "생선 타코",
   "item.culturaldelights.poached_eggplants": "데친 가지",
-
   "item.culturaldelights.chicken_roll": "닭고기 김밥",
   "item.culturaldelights.midori_roll": "미도리 김밥",
   "item.culturaldelights.chicken_roll_slice": "닭고기 김밥 조각",
@@ -54,12 +51,10 @@
   "item.culturaldelights.rice_ball": "주먹밥",
   "item.culturaldelights.egg_roll": "계란 초밥",
   "item.culturaldelights.calamari_roll": "오징어 초밥",
-
   "block.culturaldelights.cucumbers": "Cucumbers",
   "block.culturaldelights.eggplants": "Eggplants",
   "block.culturaldelights.corn": "Corn",
   "block.culturaldelights.corn_upper": "Corn Upper",
-
   "block.culturaldelights.avocado_bundle": "아보카도 꾸러미",
   "block.culturaldelights.wild_cucumbers": "야생 오이",
   "block.culturaldelights.wild_corn": "야생 옥수수",
@@ -76,7 +71,6 @@
   "block.culturaldelights.corn_cob_crate": "옥수수 상자",
   "block.culturaldelights.eggplant_crate": "가지 상자",
   "block.culturaldelights.white_eggplant_crate": "흰가지 상자",
-
   "tag.item.c.crops.avocado": "아보카도",
   "tag.item.c.crops.cucumber": "오이",
   "tag.item.c.crops.eggplant": "가지",
@@ -84,14 +78,19 @@
   "tag.item.c.crops.rice": "쌀",
   "tag.item.c.crops.onion": "양파",
   "tag.item.c.crops.tomato": "토마토",
-
   "tag.item.c.foods.bread": "빵",
   "tag.item.c.foods.cooked_egg": "익힌 달걀",
   "tag.item.c.foods.cooked_fish": "익힌 생선",
   "tag.item.c.foods.cooked_mutton": "익힌 양고기",
   "tag.item.c.foods.leafy_green": "잎채소",
   "tag.item.c.foods.milk": "우유",
-
   "tag.item.c.logs.avocado": "아보카도 원목",
-  "tag.item.c.eggs": "달걀"
+  "tag.item.c.eggs": "달걀",
+  "itemGroup.culturaldelights.culturaldelights_tab": "Cultural Delights",
+  "tag.item.c.crops.cucumbers": "오이",
+  "tag.item.c.foods.cucumbers": "오이",
+  "tag.item.c.foods.eggplant": "가지",
+  "tag.item.c.foods.dough": "반죽",
+  "tag.item.c.seeds": "씨앗",
+  "tag.item.farmersdelight.wild_crops": "?? ??"
 }

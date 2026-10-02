@@ -1,18 +1,12 @@
 {
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
-    {
-      "tag": "c:crops/avocado"
-    },
-    {
-      "tag": "c:crops/avocado"
-    },
-    {
-      "item": "minecraft:bread"
-    }
+    "#c:crops/avocado",
+    "#c:crops/avocado",
+    "minecraft:bread"
   ],
   "result": {
-    "count": 4,
-    "id": "culturaldelights:avocado_toast"
+    "id": "culturaldelights:avocado_toast",
+    "count": 4
   }
 }

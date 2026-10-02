@@ -6,12 +6,9 @@
     "###"
   ],
   "key": {
-    "#": {
-      "item": "culturaldelights:corn_cob"
-    }
+    "#": "culturaldelights:corn_cob"
   },
   "result": {
-    "count": 1,
     "id": "culturaldelights:corn_cob_crate"
   }
 }

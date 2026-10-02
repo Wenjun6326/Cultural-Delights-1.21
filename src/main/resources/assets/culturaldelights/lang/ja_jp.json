@@ -3,7 +3,6 @@
   "item.culturaldelights.eggplant_seeds": "ナスの種",
   "item.culturaldelights.corn_kernels": "トウモロコシの実",
   "block.culturaldelights.exotic_roll_medley": "西洋風お寿司の盛り合わせ",
-
   "item.culturaldelights.avocado": "アボカド",
   "item.culturaldelights.cut_avocado": "カットしたアボカド",
   "item.culturaldelights.cucumber": "キュウリ",
@@ -29,7 +28,6 @@
   "item.culturaldelights.cooked_squid": "イカ焼き",
   "item.culturaldelights.raw_calamari": "生のイカゲソ",
   "item.culturaldelights.cooked_calamari": "焼いたイカゲソ",
-
   "item.culturaldelights.elote": "エロテ",
   "item.culturaldelights.empanada": "エンパナーダ",
   "item.culturaldelights.hearty_salad": "ヘルシーサラダ",
@@ -44,7 +42,6 @@
   "item.culturaldelights.fish_taco": "フィッシュタコス",
   "item.culturaldelights.poached_eggplants": "茄子の煮浸し",
   "item.culturaldelights.eggplant_parmesan": "取り分けたナスのパルメザングラタン",
-
   "item.culturaldelights.chicken_roll": "鶏巻き寿司",
   "item.culturaldelights.midori_roll": "かっぱ巻き寿司",
   "item.culturaldelights.chicken_roll_slice": "鶏巻き",
@@ -54,12 +51,10 @@
   "item.culturaldelights.rice_ball": "おにぎり",
   "item.culturaldelights.egg_roll": "たまご",
   "item.culturaldelights.calamari_roll": "ゲソの握り寿司",
-
   "block.culturaldelights.cucumbers": "キュウリ",
   "block.culturaldelights.eggplants": "ナス",
   "block.culturaldelights.corn": "トウモロコシ",
   "block.culturaldelights.corn_upper": "トウモロコシの穂",
-
   "block.culturaldelights.avocado_bundle": "束ねたアボカド",
   "block.culturaldelights.wild_cucumbers": "野生のキュウリ",
   "block.culturaldelights.wild_corn": "野生のトウモロコシ",
@@ -77,9 +72,7 @@
   "block.culturaldelights.eggplant_crate": "ナス入り木箱",
   "block.culturaldelights.white_eggplant_crate": "白ナス入り木箱",
   "block.culturaldelights.eggplant_parmesan_block": "ナスのパルメザングラタン",
-
   "creativetab.culturaldelights.culturaldelights_tab": "Cultural Delights",
-
   "tag.item.culturaldelights.all_eggplants": "ナス類",
   "tag.item.culturaldelights.avocado_logs": "アボカドの原木",
   "tag.item.culturaldelights.avocados": "アボカド",
@@ -91,7 +84,6 @@
   "tag.item.culturaldelights.raw_salmons": "生鮭",
   "tag.item.culturaldelights.regular_eggplants": "一般的なナス",
   "tag.item.culturaldelights.smoked_regular_eggplants": "燻製した一般的なナス",
-
   "tag.item.c.crops.avocado": "アボカド",
   "tag.item.c.crops.cucumber": "キュウリ",
   "tag.item.c.crops.eggplant": "ナス",
@@ -99,14 +91,19 @@
   "tag.item.c.crops.rice": "米",
   "tag.item.c.crops.onion": "タマネギ",
   "tag.item.c.crops.tomato": "トマト",
-
   "tag.item.c.foods.bread": "パン",
   "tag.item.c.foods.cooked_egg": "焼き卵",
   "tag.item.c.foods.cooked_fish": "焼き魚",
   "tag.item.c.foods.cooked_mutton": "調理した羊肉",
   "tag.item.c.foods.leafy_green": "葉物野菜",
   "tag.item.c.foods.milk": "ミルク",
-
   "tag.item.c.logs.avocado": "アボカドの原木",
-  "tag.item.c.eggs": "卵"
+  "tag.item.c.eggs": "卵",
+  "itemGroup.culturaldelights.culturaldelights_tab": "Cultural Delights",
+  "tag.item.c.crops.cucumbers": "キュウリ",
+  "tag.item.c.foods.cucumbers": "キュウリ",
+  "tag.item.c.foods.eggplant": "ナス",
+  "tag.item.c.foods.dough": "生地",
+  "tag.item.c.seeds": "種",
+  "tag.item.farmersdelight.wild_crops": "野生の作物"
 }

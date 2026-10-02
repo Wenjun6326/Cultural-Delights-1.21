@@ -6,12 +6,9 @@
     "###"
   ],
   "key": {
-    "#": {
-      "item": "culturaldelights:white_eggplant"
-    }
+    "#": "culturaldelights:white_eggplant"
   },
   "result": {
-    "count": 1,
     "id": "culturaldelights:white_eggplant_crate"
   }
 }

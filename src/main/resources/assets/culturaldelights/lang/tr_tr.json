@@ -2,7 +2,6 @@
   "item.culturaldelights.cucumber_seeds": "Salatalık Tohumları",
   "item.culturaldelights.eggplant_seeds": "Patlıcan Tohumları",
   "item.culturaldelights.corn_kernels": "Mısır Taneleri",
-
   "item.culturaldelights.avocado": "Avokado",
   "item.culturaldelights.cut_avocado": "Kesilmiş Avokado",
   "item.culturaldelights.cucumber": "Salatalık",
@@ -28,7 +27,6 @@
   "item.culturaldelights.cooked_squid": "Pişmiş Mürekkep Balığı",
   "item.culturaldelights.raw_calamari": "Çiğ Kalamar",
   "item.culturaldelights.cooked_calamari": "Pişmiş Kalamar",
-
   "item.culturaldelights.elote": "Elote",
   "item.culturaldelights.empanada": "Empanada",
   "item.culturaldelights.hearty_salad": "Doyurucu Salata",
@@ -43,7 +41,6 @@
   "item.culturaldelights.fish_taco": "Balıklı Taco",
   "item.culturaldelights.poached_eggplants": "Haşlanmış Patlıcan",
   "item.culturaldelights.eggplant_parmesan": "Patlıcan Parmesan Tabağı",
-
   "item.culturaldelights.chicken_roll": "Tavuk Sarması",
   "item.culturaldelights.midori_roll": "Midori Sarması",
   "item.culturaldelights.chicken_roll_slice": "Tavuk Sarması Dilimi",
@@ -53,12 +50,10 @@
   "item.culturaldelights.rice_ball": "Pirinç Topu",
   "item.culturaldelights.egg_roll": "Yumurtalı Sarma",
   "item.culturaldelights.calamari_roll": "Kalamar Sarması",
-
   "block.culturaldelights.cucumbers": "Salatalıklar",
   "block.culturaldelights.eggplants": "Patlıcanlar",
   "block.culturaldelights.corn": "Mısır",
   "block.culturaldelights.corn_upper": "Mısır",
-
   "block.culturaldelights.wild_cucumbers": "Yabani Salatalıklar",
   "block.culturaldelights.wild_corn": "Yabani Mısır",
   "block.culturaldelights.wild_eggplants": "Yabani Patlıcanlar",
@@ -76,11 +71,9 @@
   "block.culturaldelights.white_eggplant_crate": "Beyaz Patlıcan Kasası",
   "block.culturaldelights.exotic_roll_medley": "Karışık Egzotik Sarmalar",
   "block.culturaldelights.eggplant_parmesan_block": "Patlıcan Parmesan",
-
   "_comment.english": "Intentionally untranslated, as this is the mod's name",
   "_comment.turkish": "Modun adı olduğu için bilerek çevrilmedi",
   "creativetab.culturaldelights.culturaldelights_tab": "Cultural Delights",
-
   "tag.item.c.crops.avocado": "Avokado",
   "tag.item.c.crops.cucumber": "Salatalık",
   "tag.item.c.crops.eggplant": "Patlıcan",
@@ -88,14 +81,19 @@
   "tag.item.c.crops.rice": "Pirinç",
   "tag.item.c.crops.onion": "Soğan",
   "tag.item.c.crops.tomato": "Domates",
-
   "tag.item.c.foods.bread": "Ekmek",
   "tag.item.c.foods.cooked_egg": "Pişmiş yumurta",
   "tag.item.c.foods.cooked_fish": "Pişmiş balık",
   "tag.item.c.foods.cooked_mutton": "Pişmiş koyun eti",
   "tag.item.c.foods.leafy_green": "Yapraklı yeşillikler",
   "tag.item.c.foods.milk": "Süt",
-
   "tag.item.c.logs.avocado": "Avokado kütükleri",
-  "tag.item.c.eggs": "Yumurtalar"
+  "tag.item.c.eggs": "Yumurtalar",
+  "itemGroup.culturaldelights.culturaldelights_tab": "Cultural Delights",
+  "tag.item.c.crops.cucumbers": "Salatal?klar",
+  "tag.item.c.foods.cucumbers": "Salatal?klar",
+  "tag.item.c.foods.eggplant": "Patl?can",
+  "tag.item.c.foods.dough": "Hamurlar",
+  "tag.item.c.seeds": "Tohumlar",
+  "tag.item.farmersdelight.wild_crops": "Yabani ekinler"
 }

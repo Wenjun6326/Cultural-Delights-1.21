@@ -2,7 +2,7 @@
 	"credit": "Made with Blockbench",
 	"textures": {
 		"0": "culturaldelights:block/avocado_pit",
-		"particle": "culturaldelights:item/avocado_pit"
+		"particle": "culturaldelights:block/avocado_pit"
 	},
 	"elements": [
 		{

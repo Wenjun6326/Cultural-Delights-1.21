@@ -2,172 +2,179 @@ package com.baisylia.culturaldelights.item;
 
 import com.baisylia.culturaldelights.CulturalDelights;
 import com.baisylia.culturaldelights.block.ModBlocks;
+import com.baisylia.culturaldelights.refabricated.CDRegUtils;
+import com.baisylia.culturaldelights.refabricated.SeedBlockItem;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemNameBlockItem;
-import net.neoforged.bus.api.IEventBus;
-import net.neoforged.neoforge.registries.DeferredItem;
-import net.neoforged.neoforge.registries.DeferredRegister;
+import net.minecraft.world.level.block.Block;
+
+import java.util.LinkedHashSet;
+import java.util.Objects;
+import java.util.function.BiFunction;
+import java.util.function.Function;
+import java.util.function.Supplier;
 
 public class ModItems {
-    public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(CulturalDelights.MOD_ID);
+    public static final LinkedHashSet<Supplier<Item>> CREATIVE_TAB_ITEMS = new LinkedHashSet<>();
 
-    //Items                                                                  item id
+    public static ResourceKey<Item> key(String path) {
+        return ResourceKey.create(Registries.ITEM, CulturalDelights.id(path));
+    }
 
-    public static final DeferredItem<Item> CUCUMBER_SEEDS = ITEMS.register("cucumber_seeds",
-            () -> new ItemNameBlockItem(ModBlocks.CUCUMBERS.get(),
-                    new Item.Properties()));
+    /** Registers a plain item and adds it to the mod's creative tab. */
+    private static Supplier<Item> item(String name, Function<Item.Properties, Item> factory, Item.Properties properties) {
+        properties.setId(key(name));
+        Supplier<Item> item = CDRegUtils.regItem(name, () -> factory.apply(properties));
+        CREATIVE_TAB_ITEMS.add(item);
+        return item;
+    }
 
-    public static final DeferredItem<Item> CORN_KERNELS = ITEMS.register("corn_kernels",
-            () -> new ItemNameBlockItem(ModBlocks.CORN.get(),
-                    new Item.Properties()));
+    private static Supplier<Item> simple(String name, Item.Properties properties) {
+        return item(name, Item::new, properties);
+    }
 
-    public static final DeferredItem<Item> EGGPLANT_SEEDS = ITEMS.register("eggplant_seeds",
-            () -> new ItemNameBlockItem(ModBlocks.EGGPLANTS.get(),
-                    new Item.Properties()));
+    /** Resolves a block supplier that lives in {@link ModBlocks} without loading it eagerly. */
+    private static Block seedBlock(Supplier<? extends Block> block) {
+        return Objects.requireNonNull(block.get(), "block was not registered");
+    }
 
+    /**
+     * Registers the BlockItem for a block that {@link ModBlocks} already registered,
+     * and adds it to the mod's creative tab.
+     *
+     * <p>{@code setId()} alone leaves the item using the {@code item.<ns>.<id>} translation
+     * key; block items are named through {@code block.<ns>.<id>} like vanilla, so the
+     * description id has to be switched explicitly before the item is constructed.
+     */
+    private static Supplier<Item> blockItem(String name, Supplier<? extends Block> block, BiFunction<Block, Item.Properties, Item> factory) {
+        final Block actualBlock = Objects.requireNonNull(block.get(), name + ": block was not registered before its item");
+        Supplier<Item> registered = CDRegUtils.regItem(name, () ->
+                factory.apply(actualBlock, new Item.Properties().setId(key(name)).useBlockDescriptionPrefix()));
+        CREATIVE_TAB_ITEMS.add(registered);
+        return registered;
+    }
 
-    //Ingredients
-    public static final DeferredItem<Item> AVOCADO = ITEMS.register("avocado",
-            () -> new Item(new Item.Properties().food(ModFoods.AVOCADO)));
+    // ---------------------------------------------------------------------
+    // Items are declared in the same order as the 1.21 creative tab.
+    // ---------------------------------------------------------------------
 
-    public static final DeferredItem<Item> CUT_AVOCADO = ITEMS.register("cut_avocado",
-            () -> new Item(new Item.Properties().food(ModFoods.CUT_AVOCADO)));
+    // Seeds
+    public static final Supplier<Item> CUCUMBER_SEEDS = item("cucumber_seeds",
+            p -> new SeedBlockItem(seedBlock(ModBlocks.CUCUMBERS), p), new Item.Properties());
+    public static final Supplier<Item> CORN_KERNELS = item("corn_kernels",
+            p -> new SeedBlockItem(seedBlock(ModBlocks.CORN), p), new Item.Properties());
+    public static final Supplier<Item> EGGPLANT_SEEDS = item("eggplant_seeds",
+            p -> new SeedBlockItem(seedBlock(ModBlocks.EGGPLANTS), p), new Item.Properties());
 
-    public static final DeferredItem<Item> CUCUMBER = ITEMS.register("cucumber",
-            () -> new Item(new Item.Properties().food(ModFoods.CUCUMBER)));
+    // Ingredients
+    public static final Supplier<Item> AVOCADO = simple("avocado", ModFoods.foodItem(ModFoods.AVOCADO));
+    public static final Supplier<Item> CUT_AVOCADO = simple("cut_avocado", ModFoods.foodItem(ModFoods.CUT_AVOCADO, ModFoods.FAST_FOOD));
+    public static final Supplier<Item> CUCUMBER = simple("cucumber", ModFoods.foodItem(ModFoods.CUCUMBER));
+    public static final Supplier<Item> PICKLE = simple("pickle", ModFoods.foodItem(ModFoods.PICKLE));
+    public static final Supplier<Item> CUT_CUCUMBER = simple("cut_cucumber", ModFoods.foodItem(ModFoods.CUT_CUCUMBER, ModFoods.FAST_FOOD));
+    public static final Supplier<Item> CUT_PICKLE = simple("cut_pickle", ModFoods.foodItem(ModFoods.CUT_PICKLE, ModFoods.FAST_FOOD));
+    public static final Supplier<Item> EGGPLANT = simple("eggplant", ModFoods.foodItem(ModFoods.EGGPLANT));
+    public static final Supplier<Item> CUT_EGGPLANT = simple("cut_eggplant", ModFoods.foodItem(ModFoods.CUT_EGGPLANT, ModFoods.FAST_FOOD));
+    public static final Supplier<Item> SMOKED_EGGPLANT = simple("smoked_eggplant", ModFoods.foodItem(ModFoods.SMOKED_EGGPLANT));
+    public static final Supplier<Item> SMOKED_TOMATO = simple("smoked_tomato", ModFoods.foodItem(ModFoods.SMOKED_TOMATO));
+    public static final Supplier<Item> SMOKED_CUT_EGGPLANT = simple("smoked_cut_eggplant", ModFoods.foodItem(ModFoods.SMOKED_CUT_EGGPLANT, ModFoods.FAST_FOOD));
+    public static final Supplier<Item> SMOKED_WHITE_EGGPLANT = simple("smoked_white_eggplant", ModFoods.foodItem(ModFoods.SMOKED_WHITE_EGGPLANT));
+    public static final Supplier<Item> SMOKED_CORN = simple("smoked_corn", ModFoods.foodItem(ModFoods.SMOKED_CORN));
+    public static final Supplier<Item> WHITE_EGGPLANT = simple("white_eggplant", ModFoods.foodItem(ModFoods.WHITE_EGGPLANT));
+    public static final Supplier<Item> CORN_COB = simple("corn_cob", ModFoods.foodItem(ModFoods.CORN_COB));
+    public static final Supplier<Item> SQUID = simple("squid", ModFoods.foodItem(ModFoods.SQUID));
+    public static final Supplier<Item> COOKED_SQUID = simple("cooked_squid", ModFoods.foodItem(ModFoods.COOKED_SQUID));
+    public static final Supplier<Item> GLOW_SQUID = simple("glow_squid", ModFoods.foodItem(ModFoods.GLOW_SQUID, ModFoods.GLOW_SQUID_CONSUMABLE));
+    public static final Supplier<Item> RAW_CALAMARI = simple("raw_calamari", ModFoods.foodItem(ModFoods.RAW_CALAMARI));
+    public static final Supplier<Item> COOKED_CALAMARI = simple("cooked_calamari", ModFoods.foodItem(ModFoods.COOKED_CALAMARI));
 
-    public static final DeferredItem<Item> PICKLE = ITEMS.register("pickle",
-            () -> new Item(new Item.Properties().food(ModFoods.PICKLE)));
+    // Meals
+    public static final Supplier<Item> POPCORN = simple("popcorn", ModFoods.foodItem(ModFoods.POPCORN, ModFoods.FAST_FOOD));
+    public static final Supplier<Item> CORN_DOUGH = simple("corn_dough", ModFoods.foodItem(ModFoods.CORN_DOUGH));
+    public static final Supplier<Item> TORTILLA = simple("tortilla", ModFoods.foodItem(ModFoods.TORTILLA));
+    public static final Supplier<Item> TORTILLA_CHIPS = simple("tortilla_chips", ModFoods.foodItem(ModFoods.TORTILLA_CHIPS, ModFoods.FAST_FOOD));
+    public static final Supplier<Item> ELOTE = simple("elote", ModFoods.foodItem(ModFoods.ELOTE));
+    public static final Supplier<Item> EMPANADA = simple("empanada", ModFoods.foodItem(ModFoods.EMPANADA));
+    public static final Supplier<Item> HEARTY_SALAD = simple("hearty_salad",
+            ModFoods.bowlFoodItem(ModFoods.HEARTY_SALAD, ModFoods.NOURISHMENT_LONG_DURATION));
+    public static final Supplier<Item> BEEF_BURRITO = simple("beef_burrito", ModFoods.foodItem(ModFoods.BEEF_BURRITO));
+    public static final Supplier<Item> MUTTON_SANDWICH = simple("mutton_sandwich", ModFoods.foodItem(ModFoods.MUTTON_SANDWICH));
+    public static final Supplier<Item> EGGPLANT_PARMESAN = simple("eggplant_parmesan",
+            ModFoods.bowlFoodItem(ModFoods.EGGPLANT_PARMESAN, ModFoods.NOURISHMENT_LONG_DURATION));
+    public static final Supplier<Item> POACHED_EGGPLANTS = simple("poached_eggplants",
+            ModFoods.bowlFoodItem(ModFoods.POACHED_EGGPLANTS, ModFoods.NOURISHMENT_LONG_DURATION));
+    public static final Supplier<Item> EGGPLANT_BURGER = simple("eggplant_burger", ModFoods.foodItem(ModFoods.EGGPLANT_BURGER));
+    public static final Supplier<Item> AVOCADO_TOAST = simple("avocado_toast", ModFoods.foodItem(ModFoods.AVOCADO_TOAST));
+    public static final Supplier<Item> CREAMED_CORN = simple("creamed_corn",
+            ModFoods.bowlFoodItem(ModFoods.CREAMED_CORN, null));
+    public static final Supplier<Item> CHICKEN_TACO = simple("chicken_taco", ModFoods.foodItem(ModFoods.CHICKEN_TACO));
+    public static final Supplier<Item> SPICY_CURRY = simple("spicy_curry",
+            ModFoods.bowlFoodItem(ModFoods.SPICY_CURRY, ModFoods.NOURISHMENT_LONG_DURATION));
+    public static final Supplier<Item> PORK_WRAP = simple("pork_wrap", ModFoods.foodItem(ModFoods.PORK_WRAP));
+    public static final Supplier<Item> FISH_TACO = simple("fish_taco", ModFoods.foodItem(ModFoods.FISH_TACO));
 
-    public static final DeferredItem<Item> CUT_CUCUMBER = ITEMS.register("cut_cucumber",
-            () -> new Item(new Item.Properties().food(ModFoods.CUT_CUCUMBER)));
+    // Sushi
+    public static final Supplier<Item> MIDORI_ROLL = simple("midori_roll", ModFoods.foodItem(ModFoods.MIDORI_ROLL));
+    public static final Supplier<Item> MIDORI_ROLL_SLICE = simple("midori_roll_slice", ModFoods.foodItem(ModFoods.MIDORI_ROLL_SLICE, ModFoods.FAST_FOOD));
+    public static final Supplier<Item> EGG_ROLL = simple("egg_roll", ModFoods.foodItem(ModFoods.EGG_ROLL, ModFoods.FAST_FOOD));
+    public static final Supplier<Item> CHICKEN_ROLL = simple("chicken_roll", ModFoods.foodItem(ModFoods.CHICKEN_ROLL));
+    public static final Supplier<Item> CHICKEN_ROLL_SLICE = simple("chicken_roll_slice", ModFoods.foodItem(ModFoods.CHICKEN_ROLL_SLICE, ModFoods.FAST_FOOD));
+    public static final Supplier<Item> PUFFERFISH_ROLL = simple("pufferfish_roll",
+            ModFoods.foodItem(ModFoods.PUFFERFISH_ROLL, ModFoods.PUFFERFISH_ROLL_CONSUMABLE));
+    public static final Supplier<Item> TROPICAL_ROLL = simple("tropical_roll", ModFoods.foodItem(ModFoods.TROPICAL_ROLL, ModFoods.FAST_FOOD));
+    public static final Supplier<Item> RICE_BALL = simple("rice_ball", ModFoods.foodItem(ModFoods.RICE_BALL, ModFoods.FAST_FOOD));
+    public static final Supplier<Item> CALAMARI_ROLL = simple("calamari_roll", ModFoods.foodItem(ModFoods.CALAMARI_ROLL, ModFoods.FAST_FOOD));
 
-    public static final DeferredItem<Item> CUT_PICKLE = ITEMS.register("cut_pickle",
-            () -> new Item(new Item.Properties().food(ModFoods.CUT_PICKLE)));
+    // Block items (registered by the block helpers so block+item ids stay in sync)
+    public static final Supplier<Item> WILD_CUCUMBERS = blockItem("wild_cucumbers", ModBlocks.WILD_CUCUMBERS, BlockItem::new);
+    public static final Supplier<Item> WILD_CORN = blockItem("wild_corn", ModBlocks.WILD_CORN, BlockItem::new);
+    public static final Supplier<Item> WILD_EGGPLANTS = blockItem("wild_eggplants", ModBlocks.WILD_EGGPLANTS, BlockItem::new);
+    public static final Supplier<Item> AVOCADO_PIT = blockItem("avocado_pit", ModBlocks.AVOCADO_PIT, BlockItem::new);
+    public static final Supplier<Item> AVOCADO_SAPLING = blockItem("avocado_sapling", ModBlocks.AVOCADO_SAPLING, BlockItem::new);
+    public static final Supplier<Item> AVOCADO_LOG = blockItem("avocado_log", ModBlocks.AVOCADO_LOG, BlockItem::new);
+    public static final Supplier<Item> AVOCADO_WOOD = blockItem("avocado_wood", ModBlocks.AVOCADO_WOOD, BlockItem::new);
+    public static final Supplier<Item> AVOCADO_LEAVES = blockItem("avocado_leaves", ModBlocks.AVOCADO_LEAVES, BlockItem::new);
+    public static final Supplier<Item> FRUITING_AVOCADO_LEAVES = blockItem("fruiting_avocado_leaves", ModBlocks.FRUITING_AVOCADO_LEAVES, BlockItem::new);
+    public static final Supplier<Item> AVOCADO_CRATE = blockItem("avocado_crate", ModBlocks.AVOCADO_CRATE, BlockItem::new);
+    public static final Supplier<Item> CUCUMBER_CRATE = blockItem("cucumber_crate", ModBlocks.CUCUMBER_CRATE, BlockItem::new);
+    public static final Supplier<Item> PICKLE_CRATE = blockItem("pickle_crate", ModBlocks.PICKLE_CRATE, BlockItem::new);
+    public static final Supplier<Item> CORN_COB_CRATE = blockItem("corn_cob_crate", ModBlocks.CORN_COB_CRATE, BlockItem::new);
+    public static final Supplier<Item> EGGPLANT_CRATE = blockItem("eggplant_crate", ModBlocks.EGGPLANT_CRATE, BlockItem::new);
+    public static final Supplier<Item> WHITE_EGGPLANT_CRATE = blockItem("white_eggplant_crate", ModBlocks.WHITE_EGGPLANT_CRATE, BlockItem::new);
+    public static final Supplier<Item> EXOTIC_ROLL_MEDLEY = blockItem("exotic_roll_medley", ModBlocks.EXOTIC_ROLL_MEDLEY,
+            (b, p) -> new BlockItem(b, p.stacksTo(1)));
+    public static final Supplier<Item> EGGPLANT_PARMESAN_BLOCK = blockItem("eggplant_parmesan_block", ModBlocks.EGGPLANT_PARMESAN_BLOCK,
+            (b, p) -> new BlockItem(b, p.stacksTo(1)));
 
-    public static final DeferredItem<Item> EGGPLANT = ITEMS.register("eggplant",
-            () -> new Item(new Item.Properties().food(ModFoods.EGGPLANT)));
+    public static void register() {
+        // Registration happens in the static initialisers above.
+    }
 
-    public static final DeferredItem<Item> CUT_EGGPLANT = ITEMS.register("cut_eggplant",
-            () -> new Item(new Item.Properties().food(ModFoods.CUT_EGGPLANT)));
+    /**
+     * Lazy accessors used by custom blocks. Blocks are constructed while
+     * {@link ModBlocks} initialises, which can happen before this class has finished
+     * initialising; calling these only at runtime keeps the two classes from
+     * deadlocking each other's static initialisers.
+     */
+    public static Item pufferfishRoll() {
+        return PUFFERFISH_ROLL.get();
+    }
 
-    public static final DeferredItem<Item> SMOKED_EGGPLANT = ITEMS.register("smoked_eggplant",
-            () -> new Item(new Item.Properties().food(ModFoods.SMOKED_EGGPLANT)));
+    public static Item tropicalRoll() {
+        return TROPICAL_ROLL.get();
+    }
 
-    public static final DeferredItem<Item> SMOKED_TOMATO = ITEMS.register("smoked_tomato",
-            () -> new Item(new Item.Properties().food(ModFoods.SMOKED_TOMATO)));
+    public static Item chickenRollSlice() {
+        return CHICKEN_ROLL_SLICE.get();
+    }
 
-    public static final DeferredItem<Item> SMOKED_CUT_EGGPLANT = ITEMS.register("smoked_cut_eggplant",
-            () -> new Item(new Item.Properties().food(ModFoods.SMOKED_CUT_EGGPLANT)));
+    public static Item eggplantParmesan() {
+        return EGGPLANT_PARMESAN.get();
+    }
 
-    public static final DeferredItem<Item> SMOKED_WHITE_EGGPLANT = ITEMS.register("smoked_white_eggplant",
-            () -> new Item(new Item.Properties().food(ModFoods.SMOKED_WHITE_EGGPLANT)));
-    public static final DeferredItem<Item> WHITE_EGGPLANT = ITEMS.register("white_eggplant",
-            () -> new Item(new Item.Properties().food(ModFoods.WHITE_EGGPLANT)));
-    public static final DeferredItem<Item> CORN_COB = ITEMS.register("corn_cob",
-            () -> new Item(new Item.Properties().food(ModFoods.CORN_COB)));
-    //public static final DeferredItem<Item> GINGER = ITEMS.register("ginger",
-    //        () -> new Item(new Item.Properties().food(ModFoods.GINGER)));
-
-    public static final DeferredItem<Item> SQUID = ITEMS.register("squid",
-            () -> new Item(new Item.Properties().food(ModFoods.SQUID)));
-
-    public static final DeferredItem<Item> COOKED_SQUID = ITEMS.register("cooked_squid",
-            () -> new Item(new Item.Properties().food(ModFoods.COOKED_SQUID)));
-
-    public static final DeferredItem<Item> GLOW_SQUID = ITEMS.register("glow_squid",
-            () -> new Item(new Item.Properties().food(ModFoods.GLOW_SQUID)));
-
-    public static final DeferredItem<Item> RAW_CALAMARI = ITEMS.register("raw_calamari",
-            () -> new Item(new Item.Properties().food(ModFoods.RAW_CALAMARI)));
-
-    public static final DeferredItem<Item> COOKED_CALAMARI = ITEMS.register("cooked_calamari",
-            () -> new Item(new Item.Properties().food(ModFoods.COOKED_CALAMARI)));
-
-
-    //Meals
-    public static final DeferredItem<Item> POPCORN = ITEMS.register("popcorn",
-            () -> new Item(new Item.Properties().food(ModFoods.POPCORN)));
-
-    public static final DeferredItem<Item> CORN_DOUGH = ITEMS.register("corn_dough",
-            () -> new Item(new Item.Properties().food(ModFoods.CORN_DOUGH)));
-
-    public static final DeferredItem<Item> TORTILLA = ITEMS.register("tortilla",
-            () -> new Item(new Item.Properties().food(ModFoods.TORTILLA)));
-
-    public static final DeferredItem<Item> TORTILLA_CHIPS = ITEMS.register("tortilla_chips",
-            () -> new Item(new Item.Properties().food(ModFoods.TORTILLA_CHIPS)));
-
-    public static final DeferredItem<Item> ELOTE = ITEMS.register("elote",
-            () -> new Item(new Item.Properties().food(ModFoods.ELOTE)));
-
-    public static final DeferredItem<Item> EMPANADA = ITEMS.register("empanada",
-            () -> new Item(new Item.Properties().food(ModFoods.EMPANADA)));
-
-    public static final DeferredItem<Item> HEARTY_SALAD = ITEMS.register("hearty_salad",
-            () -> new Item(new Item.Properties().stacksTo(16).food(ModFoods.HEARTY_SALAD)));
-
-    public static final DeferredItem<Item> BEEF_BURRITO = ITEMS.register("beef_burrito",
-            () -> new Item(new Item.Properties().food(ModFoods.BEEF_BURRITO)));
-
-    public static final DeferredItem<Item> MUTTON_SANDWICH = ITEMS.register("mutton_sandwich",
-            () -> new Item(new Item.Properties().food(ModFoods.MUTTON_SANDWICH)));
-
-    public static final DeferredItem<Item> EGGPLANT_PARMESAN = ITEMS.register("eggplant_parmesan",
-            () -> new Item(new Item.Properties().stacksTo(16).food(ModFoods.EGGPLANT_PARMESAN)));
-
-    public static final DeferredItem<Item> POACHED_EGGPLANTS = ITEMS.register("poached_eggplants",
-            () -> new Item(new Item.Properties().stacksTo(16).food(ModFoods.POACHED_EGGPLANTS)));
-
-    public static final DeferredItem<Item> EGGPLANT_BURGER = ITEMS.register("eggplant_burger",
-            () -> new Item(new Item.Properties().food(ModFoods.EGGPLANT_BURGER)));
-
-    public static final DeferredItem<Item> AVOCADO_TOAST = ITEMS.register("avocado_toast",
-            () -> new Item(new Item.Properties().food(ModFoods.AVOCADO_TOAST)));
-
-    public static final DeferredItem<Item> CREAMED_CORN = ITEMS.register("creamed_corn",
-            () -> new Item(new Item.Properties().stacksTo(16).food(ModFoods.CREAMED_CORN)));
-
-    public static final DeferredItem<Item> CHICKEN_TACO = ITEMS.register("chicken_taco",
-            () -> new Item(new Item.Properties().food(ModFoods.CHICKEN_TACO)));
-
-    public static final DeferredItem<Item> SPICY_CURRY = ITEMS.register("spicy_curry",
-            () -> new Item(new Item.Properties().stacksTo(16).food(ModFoods.SPICY_CURRY)));
-
-    public static final DeferredItem<Item> PORK_WRAP = ITEMS.register("pork_wrap",
-            () -> new Item(new Item.Properties().food(ModFoods.PORK_WRAP)));
-
-    public static final DeferredItem<Item> FISH_TACO = ITEMS.register("fish_taco",
-            () -> new Item(new Item.Properties().food(ModFoods.FISH_TACO)));
-
-    public static final DeferredItem<Item> MIDORI_ROLL = ITEMS.register("midori_roll",
-            () -> new Item(new Item.Properties().food(ModFoods.MIDORI_ROLL)));
-
-    public static final DeferredItem<Item> MIDORI_ROLL_SLICE = ITEMS.register("midori_roll_slice",
-            () -> new Item(new Item.Properties().food(ModFoods.MIDORI_ROLL_SLICE)));
-
-    public static final DeferredItem<Item> EGG_ROLL = ITEMS.register("egg_roll",
-            () -> new Item(new Item.Properties().food(ModFoods.EGG_ROLL)));
-
-    public static final DeferredItem<Item> CHICKEN_ROLL = ITEMS.register("chicken_roll",
-            () -> new Item(new Item.Properties().food(ModFoods.CHICKEN_ROLL)));
-
-    public static final DeferredItem<Item> CHICKEN_ROLL_SLICE = ITEMS.register("chicken_roll_slice",
-            () -> new Item(new Item.Properties().food(ModFoods.CHICKEN_ROLL_SLICE)));
-
-    public static final DeferredItem<Item> PUFFERFISH_ROLL = ITEMS.register("pufferfish_roll",
-            () -> new Item(new Item.Properties().food(ModFoods.PUFFERFISH_ROLL)));
-
-    public static final DeferredItem<Item> TROPICAL_ROLL = ITEMS.register("tropical_roll",
-            () -> new Item(new Item.Properties().food(ModFoods.TROPICAL_ROLL)));
-
-    public static final DeferredItem<Item> RICE_BALL = ITEMS.register("rice_ball",
-            () -> new Item(new Item.Properties().food(ModFoods.RICE_BALL)));
-
-    public static final DeferredItem<Item> CALAMARI_ROLL = ITEMS.register("calamari_roll",
-            () -> new Item(new Item.Properties().food(ModFoods.CALAMARI_ROLL)));
-    
-    public static void register(IEventBus eventBus) {
-        ITEMS.register(eventBus);
+    /** Forces class initialisation in the right order from the mod entrypoint. */
+    public static void touch() {
     }
 }

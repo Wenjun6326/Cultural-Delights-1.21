@@ -1,21 +1,12 @@
 {
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
-    {
-      "item": "culturaldelights:tortilla"
-    },
-    {
-      "tag": "culturaldelights:cooked_beefs"
-    },
-    {
-      "tag": "c:crops/avocado"
-    },
-    {
-      "item": "farmersdelight:cooked_rice"
-    }
+    "culturaldelights:tortilla",
+    "#culturaldelights:cooked_beefs",
+    "#c:crops/avocado",
+    "farmersdelight:cooked_rice"
   ],
   "result": {
-    "count": 1,
     "id": "culturaldelights:beef_burrito"
   }
 }

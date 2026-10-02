@@ -1,12 +1,9 @@
 {
   "creativetab.culturaldelights.culturaldelights_tab": "Cultural Delights",
-
-
   "item.culturaldelights.cucumber_seeds": "Gurken Samen",
   "item.culturaldelights.eggplant_seeds": "Auberginen Samen",
   "item.culturaldelights.corn_kernels": "Maiskörner",
   "block.culturaldelights.exotic_roll_medley": "Exotisches Rollen Gemisch",
-
   "item.culturaldelights.avocado": "Avocado",
   "item.culturaldelights.cut_avocado": "Geschnittene Avocado",
   "item.culturaldelights.cucumber": "Gurke",
@@ -32,7 +29,6 @@
   "item.culturaldelights.cooked_squid": "Gebratener Tintenfisch",
   "item.culturaldelights.raw_calamari": "Roher Calamari",
   "item.culturaldelights.cooked_calamari": "Gebratener Calamari",
-
   "item.culturaldelights.elote": "Elote",
   "item.culturaldelights.empanada": "Empanada",
   "item.culturaldelights.hearty_salad": "Herzhafter Salat",
@@ -47,7 +43,6 @@
   "item.culturaldelights.pork_wrap": "Schweinefleisch-Wrap",
   "item.culturaldelights.fish_taco": "Fisch Taco",
   "item.culturaldelights.poached_eggplants": "Poached Eggplants",
-
   "item.culturaldelights.chicken_roll": "Hühnchenrolle",
   "item.culturaldelights.midori_roll": "Midori-Rolle",
   "item.culturaldelights.chicken_roll_slice": "Hühnchen-Rollen Stück",
@@ -57,7 +52,6 @@
   "item.culturaldelights.rice_ball": "Reisball",
   "item.culturaldelights.egg_roll": "Ei Rolle",
   "item.culturaldelights.calamari_roll": "Calamari Rolle",
-
   "block.culturaldelights.avocado_bundle": "Avocado Bündel",
   "block.culturaldelights.wild_cucumbers": "Wild Gurken",
   "block.culturaldelights.wild_corn": "Wild Meis",
@@ -74,7 +68,6 @@
   "block.culturaldelights.corn_cob_crate": "Maiskolben Kiste",
   "block.culturaldelights.eggplant_crate": "Auberginen Kiste",
   "block.culturaldelights.white_eggplant_crate": "Weiße Auberginen Kiste",
-
   "tag.item.c.crops.avocado": "Avocado",
   "tag.item.c.crops.cucumber": "Gurke",
   "tag.item.c.crops.eggplant": "Aubergine",
@@ -82,14 +75,19 @@
   "tag.item.c.crops.rice": "Reis",
   "tag.item.c.crops.onion": "Zwiebel",
   "tag.item.c.crops.tomato": "Tomate",
-
   "tag.item.c.foods.bread": "Brot",
   "tag.item.c.foods.cooked_egg": "Gekochtes Ei",
   "tag.item.c.foods.cooked_fish": "Gekochter Fisch",
   "tag.item.c.foods.cooked_mutton": "Gekochtes Hammelfleisch",
   "tag.item.c.foods.leafy_green": "Blattgemüse",
   "tag.item.c.foods.milk": "Milch",
-
   "tag.item.c.logs.avocado": "Avocado-Holz",
-  "tag.item.c.eggs": "Eier"
+  "tag.item.c.eggs": "Eier",
+  "itemGroup.culturaldelights.culturaldelights_tab": "Cultural Delights",
+  "tag.item.c.crops.cucumbers": "Gurken",
+  "tag.item.c.foods.cucumbers": "Gurken",
+  "tag.item.c.foods.eggplant": "Aubergine",
+  "tag.item.c.foods.dough": "Teige",
+  "tag.item.c.seeds": "Samen",
+  "tag.item.farmersdelight.wild_crops": "Wilde Nutzpflanzen"
 }

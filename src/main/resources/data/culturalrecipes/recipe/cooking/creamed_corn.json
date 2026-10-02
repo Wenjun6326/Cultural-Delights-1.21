@@ -5,21 +5,14 @@
     "id": "minecraft:bowl"
   },
   "cookingtime": 400,
-  "experience": 2.0,
+  "experience": 2,
   "ingredients": [
-    {
-      "tag": "c:foods/milk"
-    },
-    {
-      "tag": "c:crops/corn"
-    },
-    {
-      "tag": "c:crops/corn"
-    }
+    "#c:drinks/milk",
+    "#c:crops/corn",
+    "#c:crops/corn"
   ],
   "recipe_book_tab": "meals",
   "result": {
-    "count": 1,
     "id": "culturaldelights:creamed_corn"
   }
 }

@@ -6,12 +6,9 @@
     "###"
   ],
   "key": {
-    "#": {
-      "item": "culturaldelights:pickle"
-    }
+    "#": "culturaldelights:pickle"
   },
   "result": {
-    "count": 1,
     "id": "culturaldelights:pickle_crate"
   }
 }

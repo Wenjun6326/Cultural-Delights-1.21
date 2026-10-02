@@ -5,30 +5,17 @@
     "id": "minecraft:bowl"
   },
   "cookingtime": 400,
-  "experience": 2.0,
+  "experience": 2,
   "ingredients": [
-    {
-      "item": "minecraft:blaze_powder"
-    },
-    {
-      "item": "farmersdelight:tomato_sauce"
-    },
-    {
-      "item": "farmersdelight:cooked_rice"
-    },
-    {
-      "tag": "c:crops/onion"
-    },
-    {
-      "tag": "culturaldelights:cooked_chickens"
-    },
-    {
-      "tag": "c:foods/milk"
-    }
+    "minecraft:blaze_powder",
+    "farmersdelight:tomato_sauce",
+    "farmersdelight:cooked_rice",
+    "#c:crops/onion",
+    "#culturaldelights:cooked_chickens",
+    "#c:drinks/milk"
   ],
   "recipe_book_tab": "meals",
   "result": {
-    "count": 1,
     "id": "culturaldelights:spicy_curry"
   }
 }

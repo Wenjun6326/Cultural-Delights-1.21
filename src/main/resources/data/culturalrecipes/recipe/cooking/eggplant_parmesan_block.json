@@ -5,30 +5,17 @@
     "id": "minecraft:bowl"
   },
   "cookingtime": 400,
-  "experience": 2.0,
+  "experience": 2,
   "ingredients": [
-    {
-      "tag": "c:crops/eggplant"
-    },
-    {
-      "tag": "c:foods/milk"
-    },
-    {
-      "tag": "c:eggs"
-    },
-    {
-      "item": "farmersdelight:raw_pasta"
-    },
-    {
-      "item": "farmersdelight:tomato_sauce"
-    },
-    {
-      "tag": "c:foods/bread"
-    }
+    "#c:crops/eggplant",
+    "#c:drinks/milk",
+    "#c:eggs",
+    "farmersdelight:raw_pasta",
+    "farmersdelight:tomato_sauce",
+    "#c:foods/bread"
   ],
   "recipe_book_tab": "meals",
   "result": {
-    "count": 1,
     "id": "culturaldelights:eggplant_parmesan_block"
   }
 }

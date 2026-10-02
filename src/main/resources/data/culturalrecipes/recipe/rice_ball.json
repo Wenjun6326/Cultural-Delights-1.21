@@ -1,24 +1,14 @@
 {
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
-    {
-      "item": "minecraft:dried_kelp"
-    },
-    {
-      "item": "farmersdelight:cooked_rice"
-    },
-    {
-      "item": "farmersdelight:cooked_rice"
-    },
-    {
-      "item": "minecraft:sweet_berries"
-    },
-    {
-      "tag": "culturaldelights:raw_salmons"
-    }
+    "minecraft:dried_kelp",
+    "farmersdelight:cooked_rice",
+    "farmersdelight:cooked_rice",
+    "minecraft:sweet_berries",
+    "#culturaldelights:raw_salmons"
   ],
   "result": {
-    "count": 5,
-    "id": "culturaldelights:rice_ball"
+    "id": "culturaldelights:rice_ball",
+    "count": 5
   }
 }

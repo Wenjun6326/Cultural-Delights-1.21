@@ -1,25 +1,21 @@
 {
   "type": "farmersdelight:cutting",
   "ingredients": [
-    {
-      "item": "culturaldelights:squid"
-    }
+    "culturaldelights:squid"
   ],
   "result": [
     {
       "item": {
-        "count": 2,
-        "id": "culturaldelights:raw_calamari"
+        "id": "culturaldelights:raw_calamari",
+        "count": 2
       }
     },
     {
       "item": {
-        "count": 2,
-        "id": "minecraft:ink_sac"
+        "id": "minecraft:ink_sac",
+        "count": 2
       }
     }
   ],
-  "tool": {
-    "tag": "c:tools/knife"
-  }
+  "tool": "#c:tools/knife"
 }

@@ -10,9 +10,9 @@ import net.minecraft.world.level.block.CropBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import org.jetbrains.annotations.NotNull;
 
 public class EggplantsBlock extends CropBlock {
-
     private static final VoxelShape[] SHAPE_BY_AGE = new VoxelShape[]{
             Block.box(0.0D, 0.0D, 0.0D, 16.0D, 2.0D, 16.0D),
             Block.box(0.0D, 0.0D, 0.0D, 16.0D, 3.0D, 16.0D),
@@ -28,10 +28,6 @@ public class EggplantsBlock extends CropBlock {
         super(properties);
     }
 
-    public BlockState getPlant(BlockGetter world, BlockPos pos) {
-        return (ModBlocks.EGGPLANTS.get()).defaultBlockState();
-    }
-
     @Override
     public int getMaxAge() {
         return 7;
@@ -42,7 +38,12 @@ public class EggplantsBlock extends CropBlock {
         return ModItems.EGGPLANT_SEEDS.get();
     }
 
-    public VoxelShape getShape(BlockState state, BlockGetter worldIn, BlockPos pos, CollisionContext context) {
+    @Override
+    protected @NotNull VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
         return SHAPE_BY_AGE[state.getValue(this.getAgeProperty())];
+    }
+
+    public BlockState getPlant(BlockGetter world, BlockPos pos) {
+        return ModBlocks.EGGPLANTS.get().defaultBlockState();
     }
 }

@@ -1,12 +1,9 @@
 {
   "type": "minecraft:smoking",
-  "ingredient": {
-    "item": "culturaldelights:glow_squid"
-  },
+  "ingredient": "culturaldelights:glow_squid",
   "result": {
-    "count": 1,
     "id": "culturaldelights:cooked_squid"
-},
-    "experience": 0.35,
+  },
+  "experience": 0.35,
   "cookingtime": 100
 }

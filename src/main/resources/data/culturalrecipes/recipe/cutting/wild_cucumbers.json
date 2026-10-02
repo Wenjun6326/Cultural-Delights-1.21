@@ -1,19 +1,15 @@
 {
   "type": "farmersdelight:cutting",
   "ingredients": [
-    {
-      "item": "culturaldelights:wild_cucumbers"
-    }
+    "culturaldelights:wild_cucumbers"
   ],
   "result": [
     {
       "item": {
-        "count": 3,
-        "id": "culturaldelights:cucumber_seeds"
+        "id": "culturaldelights:cucumber_seeds",
+        "count": 3
       }
     }
   ],
-  "tool": {
-    "tag": "c:tools/knife"
-  }
+  "tool": "#c:tools/knife"
 }

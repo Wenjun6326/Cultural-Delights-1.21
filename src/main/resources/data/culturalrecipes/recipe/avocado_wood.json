@@ -6,12 +6,10 @@
     "##"
   ],
   "key": {
-    "#": {
-      "tag": "c:logs/avocado"
-    }
+    "#": "#c:logs/avocado"
   },
   "result": {
-    "count": 3,
-    "id": "culturaldelights:avocado_wood"
+    "id": "culturaldelights:avocado_wood",
+    "count": 3
   }
 }

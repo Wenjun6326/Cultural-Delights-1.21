@@ -1,12 +1,9 @@
 {
   "creativetab.culturaldelights.culturaldelights_tab": "Cultural Delights",
-
-
   "item.culturaldelights.cucumber_seeds": "Насіння огірків",
   "item.culturaldelights.eggplant_seeds": "Насіння баклажанів",
   "item.culturaldelights.corn_kernels": "Кукурудзяні зерна",
   "block.culturaldelights.exotic_roll_medley": "Суміш екзотичних ролів",
-
   "item.culturaldelights.avocado": "Авокадо",
   "item.culturaldelights.cut_avocado": "Нарізаний авокадо",
   "item.culturaldelights.cucumber": "Огірок",
@@ -33,7 +30,6 @@
   "item.culturaldelights.raw_calamari": "Сирі кальмари",
   "item.culturaldelights.cooked_calamari": "Смажені кальмари",
   "item.culturaldelights.poached_eggplants": "Poached Eggplants",
-
   "item.culturaldelights.elote": "Елот",
   "item.culturaldelights.empanada": "Емпанада",
   "item.culturaldelights.hearty_salad": "Ситний салат",
@@ -47,7 +43,6 @@
   "item.culturaldelights.spicy_curry": "Пряний карі",
   "item.culturaldelights.pork_wrap": "Завернута свинина",
   "item.culturaldelights.fish_taco": "Рибне тако",
-
   "item.culturaldelights.chicken_roll": "Рол із курятиною",
   "item.culturaldelights.midori_roll": "Рол мідорі",
   "item.culturaldelights.chicken_roll_slice": "Шматочок рола з курятиною",
@@ -57,7 +52,6 @@
   "item.culturaldelights.rice_ball": "Рисова кулька",
   "item.culturaldelights.egg_roll": "Рол з яйцем",
   "item.culturaldelights.calamari_roll": "Рол з кальмаром",
-
   "block.culturaldelights.avocado_bundle": "В'язка авокадо",
   "block.culturaldelights.wild_cucumbers": "Дикі огірки",
   "block.culturaldelights.wild_corn": "Дика кукурудза",
@@ -74,7 +68,6 @@
   "block.culturaldelights.corn_cob_crate": "Ящик кукурудзи",
   "block.culturaldelights.eggplant_crate": "Ящик баклажанів",
   "block.culturaldelights.white_eggplant_crate": "Ящик білих баклажанів",
-
   "tag.item.c.crops.avocado": "Авокадо",
   "tag.item.c.crops.cucumber": "Огірок",
   "tag.item.c.crops.eggplant": "Баклажан",
@@ -82,14 +75,19 @@
   "tag.item.c.crops.rice": "Рис",
   "tag.item.c.crops.onion": "Цибуля",
   "tag.item.c.crops.tomato": "Помідор",
-
   "tag.item.c.foods.bread": "Хліб",
   "tag.item.c.foods.cooked_egg": "Приготоване яйце",
   "tag.item.c.foods.cooked_fish": "Приготована риба",
   "tag.item.c.foods.cooked_mutton": "Приготована баранина",
   "tag.item.c.foods.leafy_green": "Листова зелень",
   "tag.item.c.foods.milk": "Молоко",
-
   "tag.item.c.logs.avocado": "Колоди авокадо",
-  "tag.item.c.eggs": "Яйця"
+  "tag.item.c.eggs": "Яйця",
+  "itemGroup.culturaldelights.culturaldelights_tab": "Cultural Delights",
+  "tag.item.c.crops.cucumbers": "Огірки",
+  "tag.item.c.foods.cucumbers": "Огірки",
+  "tag.item.c.foods.eggplant": "Баклажани",
+  "tag.item.c.foods.dough": "Тісто",
+  "tag.item.c.seeds": "Насіння",
+  "tag.item.farmersdelight.wild_crops": "???? ????????"
 }
